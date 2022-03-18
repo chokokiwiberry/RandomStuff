@@ -13,7 +13,8 @@ $(document).ready(function(){
                 console.log (typeof answer)
                 if (typeof answer === 'object'){
                     if (answer.msg === 'done'){
-                        window.location.href = ('./login.html')
+                        window.location.href = 'login.html';
+
 
                     }
                 }
