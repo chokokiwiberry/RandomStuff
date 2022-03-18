@@ -8,11 +8,16 @@ $(document).ready(function(){
             data: data,
           // contentType: 'application/x-www-form-urlencoded',
           contentType: 'application/json',
-            success: function (msg){
-                console.log('it worked sono succ', msg)
-                if (msg === "done"){
-                    console.log('yeeee')
+            success: function (answer){
+                console.log('it worked sono succ', answer)
+                console.log (typeof answer)
+                if (typeof answer === 'object'){
+                    if (answer.msg === 'done'){
+                        window.location.href = ('./login.html')
+
+                    }
                 }
+               
             },
             error: function (){
                 console.log('nope, it didnt work sono err' )
