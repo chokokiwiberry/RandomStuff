@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $('#container').css('display', 'block');
+    $('#content').css('display', 'none')
     $('#login').click(function (){
         console.log('sono stato clicatto')
         let data = 'ciao'
@@ -13,7 +15,9 @@ $(document).ready(function(){
                 console.log (typeof answer)
                 if (typeof answer === 'object'){
                     if (answer.msg === 'done'){
-                        window.location.href = 'login.html';
+                        window.location.href = '/';
+                        $('#container').css('display', 'none');
+                        $('#content').css('display', 'block');
 
 
                     }
